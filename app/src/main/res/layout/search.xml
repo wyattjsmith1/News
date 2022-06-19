@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/search"/>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/loading_spinner"
+        android:layout_width="@dimen/loading_spinner"
+        android:layout_height="@dimen/loading_spinner"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_view"
+        app:layout_constraintEnd_toEndOf="@id/recycler_view"
+        app:layout_constraintStart_toStartOf="@id/recycler_view"
+        app:layout_constraintTop_toTopOf="@id/recycler_view" />
+
+    <EditText
+        android:padding="@dimen/base_padding"
+        android:hint="@string/search"
+        android:id="@+id/search"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
